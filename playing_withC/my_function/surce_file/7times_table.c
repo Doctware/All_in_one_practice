@@ -13,6 +13,8 @@ void times_table(void)
 	for (times = 0; times <= 12; times++)
 	{
 		table = 9 * times;
-		printf("9 x %i = %i\n", times, table);
+		printf("9 x %i = %i", times, table);
+		printf(", ");
 	}
+	printf("\n");
 }

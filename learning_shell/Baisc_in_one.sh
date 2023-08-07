@@ -1,4 +1,36 @@
 #!/bin/bash
+# Variable section
+
+#declearing variable
+VARIABLE1=50
+VARIABLE2=20
+# printing the value of both variable 
+echo $(($VARIABLE1 + $VARIABLE2))
+
+# more on varible
+PRICE_PER_APPLE=10
+my_letter=ABC
+greetings='Hello,       World!'
+echo "the name of the coder is: " $1
+echo "The name of the file is: " $0
+echo "the price of apple is: \$$PRICE_PER_APPLE"
+echo "am working with folowing letter: ${my_letter}DEFGHIJKLMNOP"
+echo $greetings "now the space: $greetings"
+
+echo ""
+
+echo "File name is" $0 # print the first argument pass which is the script name
+
+echo $3 # print the third argument
+
+Data=$5
+
+echo "A $Data costs just $6" #print 5th and 6th argument arcordingly in bitween the string
+
+echo $# # Tells how many argument passed
+
+
+echo ""
 
 echo " String section 
 -------------------
@@ -67,7 +99,6 @@ done
 
 NUMBER=(951 402 984 651 360 69 408 319 601 485 980 507 725 547 544 615 83 165 141 501 263 617 865 575 219 390 237 412 566 826 248 866 950 626 949 687 217 815 67 104 58 512 24 892 894 767 553 81 379 843 831 445 742 717 958 609 842 451 688 753 854 685 93 857 440 380 126 721 328 753 470 743 527)
 
-# write your code here
 for N in "${NUMBER[@]}"; do
 	if [ $N == 237 ]; then
 		break;

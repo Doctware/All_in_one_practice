@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncpy - copy sring from src dest
+ * _strncpy - copy sring from src to dest
  * @src: were to copy from
  * @dest: were to copy to
  * Return: pointer to the dest
@@ -15,7 +15,7 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		dest[i] = src[i];
 	}
-	for (; i < n; i ++)
+	for (; i < n; i++)
 	{
 		dest[i] = '\0';
 	}

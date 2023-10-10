@@ -11,11 +11,11 @@ char *_strcat(char *dest, char *src)
 {
 	char *copy = dest;
 
-	while (*dest){
+	while (*dest != '\0'){
 		dest++;
 	}
 
-	while (*src){
+	while (*src != '\0'){
 		*dest = *src;
 		dest++;
 		src++;

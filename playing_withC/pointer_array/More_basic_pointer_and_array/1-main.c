@@ -21,6 +21,10 @@ int main(void)
     	printf("%s", s1);
     	printf("%s", s2);
     	printf("%s", ptr);
+	ptr = _strncat(s1, s2, 6);
+	printf("%s", s1);
+	printf("%s", s2);
+	printf("%s\n", ptr);
     	return (0);
 
 }

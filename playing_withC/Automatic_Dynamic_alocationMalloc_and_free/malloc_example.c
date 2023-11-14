@@ -19,7 +19,7 @@ int main()
 	printf("%d\n", tab[2]);
 	free(tab);
 
-	str = malloc(sizeof(*str) * 3);
+	str = malloc(sizeof(char) * 10);
 	str[0] = 'D';
 	str[1] = 'o';
 	str[2] = 'c';

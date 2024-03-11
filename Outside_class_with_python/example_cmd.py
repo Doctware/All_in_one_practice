@@ -9,7 +9,7 @@ class HelloWorld(cmd.Cmd):
 
     def do_great(self, person):
         if person and person in self.freinds:
-            greeting = "hello {:s}".formart(person)
+            greeting = "hello {:s}".format(person)
         elif person:
             greeting = "hello, " + person
         else:
@@ -20,10 +20,7 @@ class HelloWorld(cmd.Cmd):
         if not text:
             completion = self.freinds[:]
         else:
-            completion = freinds[f 
-                                 for f in self.freinds
-                                 if f.startswith(text)
-                                 ]
+            completion = [f for f in self.freinds if f.startswith(text)]
         return completion
 
     def help_great(self):

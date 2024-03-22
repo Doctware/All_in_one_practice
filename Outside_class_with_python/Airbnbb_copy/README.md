@@ -29,13 +29,8 @@ Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
 
-(hbnb) 
-(hbnb) 
+(hbnb)
+(hbnb)
 (hbnb) quit
 $
 -------------------------------------------------------------------------------------------------
-Or to get help about a specific command, do
-$./console.py
-(hbnb) help [command name]
-
-enjoy!!!!!

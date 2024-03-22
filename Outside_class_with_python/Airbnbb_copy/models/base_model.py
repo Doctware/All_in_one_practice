@@ -1,41 +1,45 @@
 #!/usr/bin/python3
-"""
-This module contains the Baseclass
-"""
-import datetime
+""" This module contains the class BaseModel """
+from datetime import datetime
 import uuid
+from models import storage 
 
 
 class BaseModel:
-    """ the BaseClass Module """
+    """ the class BaseModel """
 
     def __init__(self, *args, **kwargs):
-        """ inisializing public instance attribute """
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.datetime.now()
-        self.updated_at = datetime.datetime.now()
-
-    def __str__(self):
-        """ Print some information about BaseModes """
-        return "[{}] ({}) {}"\
-            .format(self.__class__.__name__, self.id, self.__dict__)
+        """ inisilize the public instances """
+        if kwargs:
+            for key, value in kwargs.items():
+                if key != '__class__':
+                    if key in ['created_at', 'updated_at']:
+                        setattr(self, key, datetime.strptime(value, '%Y-%m-%dT%H:%M:%S.%f'))
+                    else:
+                        setattr(self, key, value)
+        else:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = self.created_at
+            storage.new(self)
 
     def save(self):
-        """ Updates the public instance attribute updated_at
-            with the current date time
-        """
-        self.updated_at = datetime.datetime.now()
+        """ update the public insatnce attribute to the
+            current date time"""
+        self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
-        """
-        returns a dictionary containing all keys/value of __dict__
-        of instances
-        """
-        obj_dict = self.__dict__.copy()
-        obj_dict['__class__'] = self.__class__.__name__
-        obj_dict['created_at'] = self.created_at.isoformat()
-        obj_dict['updated_at'] = self.updated_at.isoformat()
-        return obj_dict
+        """ returns a dictionary containing all keys/values of
+            __dict__ of the instance"""
+        dict_obj = self.__dict__.copy()
+        dict_obj['__class__'] = self.__class__.__name__
+        dict_obj['created_at'] = self.created_at.isoformat()
+        dict_obj['updated_at'] = self.updated_at.isoformat()
 
-    def __repr__(self):
-        return self.created_at
+        return dict_obj
+
+    def __str__(self):
+        """ print INFO about basemodel"""
+        return "[{}] ({}) {}"\
+            .format(self.__class__.__name__, self.id, self.__dict__)

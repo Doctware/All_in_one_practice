@@ -64,7 +64,7 @@ h1, h3, h4, h5, p {
 	padding: 5px 20px;
 }
 
-footer.btn-alt {
+footer .btn-alt {
 	border: red solid;
 	padding: 30px 20px;
 }

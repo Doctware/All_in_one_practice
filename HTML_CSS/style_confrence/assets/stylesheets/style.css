@@ -57,7 +57,9 @@ footer, header, hgroup, menu, nav, section {
  ===========================
  */
 .logo {
-	float: left;
+	border-top: 4px solid #648880;
+	padding: 40px 0 22px 0;
+	float: left
 }
 
 *,

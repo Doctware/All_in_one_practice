@@ -30,6 +30,36 @@ footer, header, hgroup, menu, nav, section {
  ===============================
  */
 
+/*
+ ==============================
+ CClearfix
+ ==============================
+ */
+.group:before,
+.group:after {
+	content: "";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+.group {
+	clear: both;
+	*zoom: 1;
+}
+
+/*
+ ===========================
+
+ Primary header
+ ===========================
+ */
+.logo {
+	float: left;
+}
+
 *,
 *:before,
 *:after {

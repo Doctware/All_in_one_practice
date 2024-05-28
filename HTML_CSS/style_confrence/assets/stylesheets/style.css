@@ -134,3 +134,17 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/*
+ ==================
+ primary footer
+ =================
+ */
+.prrimary-footer small {
+	float: left;
+}
+
+.primarry-footer {
+	padding-bottom: 44px;
+	padding-top: 44px;
+}

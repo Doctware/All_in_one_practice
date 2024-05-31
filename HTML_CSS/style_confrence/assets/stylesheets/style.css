@@ -25,21 +25,30 @@ footer, header, hgroup, menu, nav, section {
 }
 
 /*
+ ========================
+ custom style
+ */
+body {
+	color: #888;
+	font: 300 16px/22px "open Sans", "Helvetica Neue", helvetica, Arial, sans-serif;
+}
+
+/*
  ===============================
  Grid
  ===============================
- */
-
-/*
- ==============================
- CClearfix
- ==============================
  */
 .group:before,
 .group:after {
 	content: "";
 	display: table;
 }
+
+/*
+ ==============================
+ CClearfix
+ ==============================
+ */
 
 .group:after {
 	clear: both;
@@ -58,8 +67,10 @@ footer, header, hgroup, menu, nav, section {
  */
 .logo {
 	border-top: 4px solid #648880;
+	float: left;
+	font-size: 48px;
+	line-height: 44px;
 	padding: 40px 0 22px 0;
-	float: left
 }
 
 *,
@@ -80,6 +91,75 @@ h1, h3, h4, h5, p {
 	margin-bottom: 22px;
 }
 
+h1, h2, h3, h4 {
+	color: #648880;
+}
+
+h1 {
+	font-size: 36px;
+	line-height: 44px;
+}
+h2 {
+	font-size: 24px;
+	line-height: 44px;
+}
+
+h3 {
+	font-size: 21px;
+}
+h4 {
+	font-size: 8px;
+}
+
+h5 {
+	color: #a9b2b9;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+strong {
+	font-weight: = 400;
+}
+
+cite, em {
+	font-style: italic;
+}
+
+.tagline {
+	margin: 66px 0 22px 0;
+}
+
+.primary-nav {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.primary-footer {
+	color: #648880;
+	font-size: 14px;
+	padding-bottom: 44px;
+}
+
+.primary-footer small {
+	float: left;
+	font-weight: 400;
+}
+
+
+
+/*
+ ===========================
+ Links
+ ===========================
+ */
+a:hover {
+	color: #a9b2b9;
+}
+
+a {
+	color: #648880;
+}
+
 /*
  ============================
  Buttons
@@ -96,13 +176,17 @@ h1, h3, h4, h5, p {
 	padding: 5px 20px;
 }
 
-footer .btn-alt {
-	border: green solid;
-	padding: 10px 10px;
+.hero {
+	line-height: 44px;
+	padding: 22px 80px 66px 80px;
 }
 
-.hero {
-	padding: 22px 80px 66px 80px;
+.hero h2 {
+	font-size: 36px;
+}
+
+.hero p {
+	font-size: 24px;
 }
 
 .container {
@@ -110,6 +194,10 @@ footer .btn-alt {
 	padding-left: 30px;
 	padding-right: 30px;
 	width: 960px;
+}
+
+.teaser a:hover h3 {
+	color: #a9b2b9;
 }
 
 body {

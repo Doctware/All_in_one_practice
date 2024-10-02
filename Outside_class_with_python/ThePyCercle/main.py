@@ -16,14 +16,17 @@ if __name__ == "__main__":
     b3 = Base(99456)
     print(b3.id)
 
+    b4 = Base()
+    print(b4.id)
+
     print("---------")
     print()
 
     print("Rectangle section")
     print()
 
-    r1 = Rectangle()
+    r1 = Rectangle(10, 2)
     print(r1.id)
 
-    r2 = Rectangle()
+    r2 = Rectangle(2, 10)
     print(r2.id)

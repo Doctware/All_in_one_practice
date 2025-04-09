@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.text {
+	color: #990099;
+}
+
+.btn {
+	width: 200px;
+	height:  100px;
+	background-color: green;
+	color: blue;
+	float: ;
+	border: 25px;
+	border-radius: 60%;
+}
+
+.btncls {
+	background-color: yellow;
+	border-radius: 30px;
+	width: 50%;
+	height: 50%;
+	content: center;	
+}
